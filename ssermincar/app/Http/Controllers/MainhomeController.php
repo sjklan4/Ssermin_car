@@ -25,9 +25,15 @@ class MainhomeController extends Controller
             $carlist->save();
 
         }
-
         return redirect()->route('home');
     }
+
+  
+
+
+
+
+
 }
 
 

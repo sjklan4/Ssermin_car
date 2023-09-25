@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-route::get('/home', [MainhomeController::class, 'home'])->name('home');
+Route::get('/home', [MainhomeController::class, 'home'])->name('home');
+Route::put('/home',[MainhomeController::class, 'imgEdit'])->name('img.edit');

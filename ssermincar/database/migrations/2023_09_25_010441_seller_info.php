@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('Contract_num')->nullable(); // 계약 건수 - 판매 건수
 
             $table->string('Remember_regi',1000); // 가입시 인증여부 - 가입자 허가 여부
+            $table->delete('delflg');
         });
     }
     

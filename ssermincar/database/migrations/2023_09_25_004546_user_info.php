@@ -25,6 +25,7 @@ return new class extends Migration
             $table->integer('Car_Sell_cnt')->nullable(); // 회원이 개인 판매중인 차량수
             $table->timestamp('last_used_at')->nullable(); //마지막 접속 내용
             $table->timestamps(); 
+            $table->delete('delflg');
         });
     }
 

@@ -13,8 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('personal_access_tokens', function (Blueprint $table) {
-
+        Schema::create('car_checkinfo', function (Blueprint $table) {
+            $table->integer('Ch_num')->autoincrement();
+            $table->foreign('Car_num')->references('Car_num')->on('Car_info'); //등록차량 순번
+            $table->integer('Seller_num')->nullable(); // 판매자 일련 번호
+            $table->integer('User_num')->nullable(); // 일반사용자 일련 번호
+            $table->char('Check_cmp_num',1); // 인증업체 구분번호(0: 없음/ 1: 엔카 / 2: 차차....)
+            $table->string('Check_link',1000)->nullable(); // 인증 차량 링크 
+            $table->timestamp('Check_data'); // 인증일자
+            $table->integer('Accident_num')->nullable(); //사고 건수
+            $table->integer('Surface_repair_cnt')->nullable();//판금부위수- 판금수리횟수
+            $table->integer('Insur_repair_cnt')->nullable();//보험수리 건수
+            $table->integer('Simple_changeRep_cnt')->nullable(); // 단순교체 건수
         });
     }
 

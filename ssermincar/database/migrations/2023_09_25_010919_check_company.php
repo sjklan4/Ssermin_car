@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('check_company', function (Blueprint $table) {
+
             $table->integer('Com_num')->autoIncrement();
             $table->foreign('Ch_num')->references('Ch_num')->on('car_checkinfo');
             $table->string('Com_name',1000); //검사 업체 명

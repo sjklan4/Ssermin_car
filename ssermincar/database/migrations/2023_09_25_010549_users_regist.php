@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('Certifi_numbering',1000); // 인증번호
             $table->timestamp('Send_time');//인증번호 발송시간
             $table->timestamp('Destory_time'); // 파기 시간
-            $table->char('div_user',1); // 유저 구분 테이블 0: 일반 / 1: 딜러
-            $table->integer('Seller_num')->nullable(); // 판매자 일련 번호 
             $table->integer('User_num')->nullable(); // 일반사용자 일련 번호
+            $table->integer('Seller_num')->nullable(); // 판매자 일련 번호 
+            $table->char('div_user',1); // 유저 구분 테이블 0: 일반 / 1: 딜러
         });
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('truck_option', function (Blueprint $table) {
-            $table->id(); // Assuming you want an auto-increment primary key.
+            $table->foreignId('Car_num')->constrained('car_info'); // Assuming you want an auto-increment primary key.
             $table->integer('Car_Num')->autoIncrement()->comment('등록차량 순번');
             $table->char('power_gate', 1)->nullable()->default(0)->comment('외관(0 : 없음 / 1 : 있음)');
             $table->char('aluminum_wheel', 1)->nullable()->default(0)->comment('외관(0 : 없음 / 1 : 있음)');
@@ -52,7 +52,7 @@ return new class extends Migration
             $table->char('cruze_cnt', 1)->nullable()->default(0)->comment('편의( 0: 미적용 / 1: 적용)');
             $table->char('nav', 1)->nullable()->default(0)->comment('편의( 0: 미적용 / 1: 적용)');
             $table->char('refriger_warmmer', 1)->nullable()->default(0)->comment('편의( 0: 미적용 / 1: 적용)');
-            
+            $table->softDeletes();
             $table->timestamps();
         });
     }

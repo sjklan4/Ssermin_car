@@ -73,6 +73,7 @@ return new class extends Migration
             $table->char('masage_sheet', 1)->nullable()->default(0)->comment('시트(0:미적용 / 1 :적용 )');
             $table->char('del_flg',0); // 0:차량이 등록된상태, 1: 팔리거나 삭제된 상태
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

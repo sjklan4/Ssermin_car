@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('seller_info', function (Blueprint $table) {
-            $table->integer('Seller_num')->autoIncrement(); // 판매자 유저 일련 번호
+            $table->bigIncrements('Seller_num'); // 판매자 유저 일련 번호
             $table->string('Seller_ID',1000); // 판매자 아이디
             $table->string('password',1000); // 판매자 계정 비번
             $table->string('Seller_phone_num',1000); // 판매자 연락처
@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('Remember_regi',1000); // 가입시 인증여부 - 가입자 허가 여부
             $table->integer('Contract_num')->nullable(); // 계약 건수 - 판매 건수
             $table->string('Sell_addres',1000); // 판매자 주소
-            $table->delete('delflg');
+            $table->softDeletes();
         });
     }
     

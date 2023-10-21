@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Car_identNum',100); //차대번호
             $table->string('Car_Registnum',500); // 차량 등록번호 - 차번호
             $table->string('Car_Name',500); // 차량 이름
-            $table->string('Car_Type',100); // 차종 - 소,중,대,특,전
+            $table->string('Car_Type',100); // 차종 - 소,중,대,특,전,화물
             $table->integer('Car_CC'); // 차량 CC - 배기량
             $table->string('Car_electPower',500)->nullable(); // 전기차 와트수 - 배터리 저장 공간기준
             $table->string('Car_wegith',500); // 차량 톤수

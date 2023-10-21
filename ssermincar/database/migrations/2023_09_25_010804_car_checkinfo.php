@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('car_checkinfo', function (Blueprint $table) {
             $table->bigIncrements('Ch_num');
-            $table->foreign('Car_num')->references('Car_num')->on('Car_info'); //등록차량 순번
+            $table->foreignId('Car_num')->constrained('car_info','Car_num'); //등록차량 순번
             $table->char('Check_cmp_num',1); // 인증업체 구분번호(0: 없음/ 1: 엔카 / 2: 차차....)
             $table->string('Check_link',1000)->nullable(); // 인증 차량 링크 
             $table->timestamp('Check_data'); // 인증일자

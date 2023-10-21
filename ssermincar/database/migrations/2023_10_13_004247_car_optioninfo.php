@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('car_optioninfo', function (Blueprint $table) {
-            $table->id(); // 일반 차량 순번primiry
-            $table->integer('Car_Num')->nullable()->comment('등록차량 순번');
+            $table->bigIncrements('car_id');
+            $table->foreignId('Car_num')->constrained('car_info'); //등록차량 정보 테이블의 참조컬럼
             $table->char('sunroof', 1)->nullable()->default(0)->comment('외관/내장 : 0없음 / 1 있음');
             $table->char('head_ramp', 1)->nullable()->default(0)->comment('외관/내장 : 0없음 / 1 있음');
             $table->char('power_trunk', 1)->nullable()->default(0)->comment('외관/내장 : 0없음 / 1 있음');

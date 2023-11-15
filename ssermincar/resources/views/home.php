@@ -14,7 +14,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
         
         <!-- title of site -->
-        <title>CarVilla</title>
+		<!-- 타이틀 부분 변경 필요 -->
+        <title>CarVilla</title> 
 
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
@@ -120,7 +121,7 @@
 							<div class="row">
 								<div class="col-md-offset-1 col-md-2 col-sm-12">
 									<div class="single-model-search">
-										<h2>select year</h2>
+										<h2>연식</h2>
 										<div class="model-select-icon">
 											<select class="form-control">
 

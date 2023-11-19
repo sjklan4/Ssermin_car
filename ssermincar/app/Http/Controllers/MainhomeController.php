@@ -12,23 +12,26 @@ class MainhomeController extends Controller
     }
 
 
-    public function imgEdit(Request $req){
-        if ($req->hasFile('carimg')) {
-            $img = $req->file('carimg');
-            $fileName = $req->file('carimg')->getClientOriginalName();
+    // public function imgEdit(Request $req){
+    //     if ($req->hasFile('carimg')) {
+    //         $img = $req->file('carimg');
+    //         $fileName = $req->file('carimg')->getClientOriginalName();
 
-            $img->move(public_path('carimg'), $fileName);
+    //         $img->move(public_path('carimg'), $fileName);
 
-            $imgePath = 'carimg/' . $carimg;
+    //         $imgePath = 'carimg/' . $carimg;
 
-            $carlist->d_img_path = $imgePath;
-            $carlist->save();
+    //         $carlist->d_img_path = $imgePath;
+    //         $carlist->save();
 
-        }
-        return redirect()->route('home');
+    //     }
+    //     return redirect()->route('home');
+    // }
+
+    public function regist(){
+        return view('regist');
+
     }
-
-  
 
 
 

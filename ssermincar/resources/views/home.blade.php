@@ -1,5 +1,5 @@
-@extends('layout.layout')
-@section('contents')
+
+@section('homecontents')
     <div>
         <a href="{{route('usernomal.regist')}}">회원가입</a>
     </div>

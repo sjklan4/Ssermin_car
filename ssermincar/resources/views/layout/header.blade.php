@@ -9,7 +9,7 @@
 </head>
 <body>
     <ul class="menu_list">
-        <li class="menu_name"><a href="{{route('home')}}">로고위치</a></li>
+        <li class="menu_name"><h1><a href="{{route('home')}}">로고위치</a></h1></li>
         <li class="menu_name">최저 도전!</li>
         <li class="menu_name">이차어때</li>
         <li class="menu_name">국산</li>

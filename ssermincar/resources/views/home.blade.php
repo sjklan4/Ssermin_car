@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <div class="header">
-            @include('layout.header')
+        @include('layout.header')
         </div>
-        <hr>
 
+        <hr>
         <div class="mainhomebody">
             <p>여기 메인페이지</p>
         </div>
-        
+
         <hr>
         <div class="footer">
             @include('layout.footer')

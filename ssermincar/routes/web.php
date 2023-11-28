@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainhomeController;
+use Illuminate\Contracts\Foundation\MaintenanceMode;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//차량 검색 라우트
+Route::post('/searchcar', [MainhomeController::class], 'search_car')->name('searchcar');
 
 Route::get('/home', [MainhomeController::class, 'home'])->name('home');
 Route::put('/imgedit',[MainhomeController::class, 'imgEdit'])->name('img.edit');

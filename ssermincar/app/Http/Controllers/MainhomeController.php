@@ -33,7 +33,11 @@ class MainhomeController extends Controller
 
     }
 
+//임시 설정 아래 값 수정 필요
+    public function search_car(){
+        return view('home');
 
+    }
 
 
 

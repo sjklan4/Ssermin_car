@@ -14,3 +14,35 @@ body{
 
 
 }
+.my_carsearch {
+    padding: 10px; /* Add some padding for spacing */
+    margin-bottom: 20px; /* Add margin to separate from other sections */
+}
+
+.search_list{
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.mycar_search_title{
+    color: blue;
+
+}
+.mycar_title{
+    color: black;
+}
+
+.search_list_title{
+    list-style: none;
+
+}
+.search_detail{
+    float: left;
+    margin: 0 auto;
+}
+
+.search_box{
+    padding: auto;
+    margin: 0 auto;
+}
+

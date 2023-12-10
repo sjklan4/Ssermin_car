@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Models\car_info;
 use Illuminate\Http\Request;
 
 class MainhomeController extends Controller
@@ -11,23 +12,6 @@ class MainhomeController extends Controller
         return view('home');
     }
 
-
-    // public function imgEdit(Request $req){
-    //     if ($req->hasFile('carimg')) {
-    //         $img = $req->file('carimg');
-    //         $fileName = $req->file('carimg')->getClientOriginalName();
-
-    //         $img->move(public_path('carimg'), $fileName);
-
-    //         $imgePath = 'carimg/' . $carimg;
-
-    //         $carlist->d_img_path = $imgePath;
-    //         $carlist->save();
-
-    //     }
-    //     return redirect()->route('home');
-    // }
-
     public function regist(){
         return view('regist');
 
@@ -35,11 +19,17 @@ class MainhomeController extends Controller
 
 //임시 설정 아래 값 수정 필요
     public function search_car(){
+
+     
         return view('home');
 
     }
 
-
+    public function select_carmaker()
+    {
+        $carMakers = car_info::select('Car_maker')->distinct()->pluck('Car_maker');
+        return view('home', ['carMaker' => $carMakers]);
+    }
 
 }
 

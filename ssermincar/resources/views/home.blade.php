@@ -23,7 +23,6 @@
                     <button type="submit">검색</button>
                 </div>
             </form>
-        
                 <div class="today_car">
                     <div class="today_carimg">
                         <h1>이미지 부분</h1>
@@ -35,13 +34,15 @@
                 </div>
 
                 <div class="my_carsearch">
-                    <div class="search_list">
+                    <div class="search_name">
                         <p class="mycar_search_title">
                             SSERMIN
                             <span class="mycar_title">
                                 내 차 고르기
                             </span>
                         </p>
+                    </div>
+                    <div class="search_list_name"> 
                         <ul class="search_list_title">
                             <li class="search_detail">국산</li>
                             <li class="search_detail">수입</li>
@@ -52,47 +53,45 @@
                         </ul>
                     </div>
                     <div class="search_box">
-                        <table>
-                            <tr>
-                                <td>
-                                    <select name="domproduct" id="domproduct">
-                                        <option value="">제조사</option>
-                                        <option value="hyundai">현대</option>
-                                        <option value="kia">기아</option>
-                                        <option value="kg">KG(쌍용)</option>
-                                        <option value="chevorlet">쉐보레</option>
-                                        <option value="renault">르노</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    {{-- 차량 모델정보 DB에서 가져오기 foreach로 option value지정 --}}
-                                    <select name="domproduct" id="domproduct">
-                                        <option value="">차량모델</option>
-                                        <option value="hyundai">현대</option>
-                                        <option value="kia">기아</option>
-                                        <option value="kg">KG(쌍용)</option>
-                                        <option value="chevorlet">쉐보레</option>
-                                        <option value="renault">르노</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    {{-- 같은 방식으로 세부 모델도 DB에서 받아오기 --}}
-                                    <select name="domproduct" id="domproduct">
-                                        <option value="">세부모델</option>
-                                        <option value="hyundai">현대</option>
-                                        <option value="kia">기아</option>
-                                        <option value="kg">KG(쌍용)</option>
-                                        <option value="chevorlet">쉐보레</option>
-                                        <option value="renault">르노</option>
-                                    </select>
-                                </td>
-                                <td>
-                                   <button>
-                                        찾기 버튼 부분
-                                   </button>
-                                </td>
-                            </tr>
-                        </table>
+                        {{-- 차량 모델정보 DB에서 가져오기 foreach로 option value지정 --}}
+                        {{-- 같은 방식으로 세부 모델도 DB에서 받아오기 --}}
+                        <ul class="search_list_title">
+                            <li class="search_detail">
+                                <select name="domproduct" id="domproduct">
+                                    <option value="">제조사</option>
+
+                                    @foreach($carMaker as $carMaker)
+                                        <option value="{{ $carMaker }}">{{ $carMaker }}</option>
+                                    @endforeach
+
+                                </select>
+                            </li>
+                            <li class="search_detail">
+                                <select name="domproduct" id="domproduct">
+                                    <option value="">차량모델</option>
+                                    <option value="hyundai">현대</option>
+                                    <option value="kia">기아</option>
+                                    <option value="kg">KG(쌍용)</option>
+                                    <option value="chevorlet">쉐보레</option>
+                                    <option value="renault">르노</option>
+                                </select>
+                            </li>
+                            <li class="search_detail">
+                                <select name="domproduct" id="domproduct">
+                                    <option value="">세부모델</option>
+                                    <option value="hyundai">현대</option>
+                                    <option value="kia">기아</option>
+                                    <option value="kg">KG(쌍용)</option>
+                                    <option value="chevorlet">쉐보레</option>
+                                    <option value="renault">르노</option>
+                                </select>
+                            </li>
+                            <li class="search_detail">
+                                <button>
+                                    찾기 버튼 부분
+                                </button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
        

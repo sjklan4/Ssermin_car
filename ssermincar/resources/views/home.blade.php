@@ -59,7 +59,7 @@
                             <li class="search_detail">
                                 <select name="domproduct" id="domproduct">
                                     <option value="">제조사</option>
-
+                                 
                                     @foreach($carmakers as $carMaker)
                                         {{-- <p>{{$carMaker}}</p> --}}
                                         <option value="{{ $carMaker }}">{{ $carMaker }}</option>

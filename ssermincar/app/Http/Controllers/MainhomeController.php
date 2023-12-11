@@ -28,7 +28,12 @@ class MainhomeController extends Controller
     public function select_carmaker()
     {
         $carMakers = car_info::select('Car_maker')->distinct()->pluck('Car_maker');
-        return view('home',['carmakers' => $carMakers]);
+        // $ddd = dump($carMakers);
+        // exit;
+
+        return view('home')->with('carmakers',$carMakers);
+        // return view('home',['carmakers' => $carMakers]);
+
     }
 
 }

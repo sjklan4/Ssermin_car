@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //차량 검색 라우트
-Route::get('/carselect_mklist',[MainhomeController::class, 'select_carmaker'])->name('carmakerlist');
+Route::get('/home/carselect_mklist',[MainhomeController::class, 'select_carmaker'])->name('carmakerlist');
 Route::post('/searchcar', [MainhomeController::class], 'search_car')->name('searchcar');
 
 
